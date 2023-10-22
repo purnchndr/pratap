@@ -1,6 +1,6 @@
 import style from "./Footer.module.css";
 
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import {
   LinkedInIcon,
   DocumentIcon,
@@ -17,12 +17,15 @@ function Footer() {
   return (
     <footer className={style.footer}>
       <div className={style.footerintro}>
-        <h1>Purnachandra</h1>
+        <NavLink to="/">
+          <h1>Purnachandra</h1>
+        </NavLink>
         <p>
-          I love solving realworld problem using technology, I always curius to
+          I love solving real world problem using technology, I always curius to
           learning and inplementing new things
         </p>
       </div>
+      <div className={style.line}></div>
       <div className={style.footersociallinks}>
         <h1>Let's Become Social</h1>
         <Link
@@ -42,14 +45,7 @@ function Footer() {
         >
           <GithubIcon size={iconsize} />
         </Link>
-        <Link
-          target="_blank"
-          title="Resume document"
-          className={style.navlink}
-          to="https://docs.google.com/document/d/18PEardLKILyrmBauSSOVJrAi6Ve1SLxgg4aBELqgZBk/edit"
-        >
-          <DocumentIcon size={iconsize} />
-        </Link>
+
         <Link
           target="_blank"
           title="Instagram Link"
@@ -59,9 +55,12 @@ function Footer() {
           <InstagramIcon size={iconsize} />
         </Link>
         <p>
-          <a href="www.leetcode.com/purnchndr">Leetcode</a>
+          <Link target="_blank" to="https://www.leetcode.com/purnchndr">
+            Leetcode
+          </Link>
         </p>
       </div>
+      <div className={style.line}></div>
       <div className={style.footercontact}>
         <h1>Contact Me</h1>
         <Link
@@ -79,12 +78,20 @@ function Footer() {
           <PhoneIcon size={iconsize} />
         </Link>
         <Link
-          title="Phone Link"
+          title="Whatsapp Link"
           className={style.navlink}
           target="_blank"
           to="https://api.whatsapp.com/send/?phone=%2B919125847068&text=Hi+Pratap"
         >
           <WhatsAppIcon size={iconsize} />
+        </Link>
+        <Link
+          target="_blank"
+          title="Resume document"
+          className={style.navlink}
+          to="https://docs.google.com/document/d/18PEardLKILyrmBauSSOVJrAi6Ve1SLxgg4aBELqgZBk/edit"
+        >
+          <DocumentIcon size={iconsize} />
         </Link>
         <p>
           <a href="mailto:pratap.careers@gmail.com">pratap.careers@gmail.com</a>

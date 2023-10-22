@@ -14,15 +14,19 @@ function Intro() {
       <div className={`${style.profileintro} ${style.introsection}`}>
         <h1>Software Engineer</h1>
         <h2>MERN Stack Developer</h2>
-        <p>
-          Highly skilled Software Engineer with 2 years of experience in MERN
-          stack development and exceptional skills in Data Structures and
-          Algorithms. Proven track record of spearheading and delivering complex
-          projects from concept to release. Proficient in designing, developing,
-          and maintaining web-based applications while also keeping up with
-          emerging technologies and architectural patterns. Effective
-          communicator with strong problem-solving abilities, and a passion for
-          delivering quality software solutions that meet user needs.
+        <p className={style.introdetails}>
+          &#8226; Highly skilled Software Engineer with 2 years of experience in
+          MERN stack development and exceptional skills in Data Structures and
+          Algorithms. <br /> &#8226; Proven track record of spearheading and
+          delivering complex projects from concept to release.
+          <br />
+          &#8226; Proficient in designing, developing, and maintaining web-based
+          applications while also keeping up with emerging technologies and
+          architectural patterns.
+          <br />
+          &#8226; Effective communicator with strong problem-solving abilities,
+          and a passion for delivering quality software solutions that meet user
+          needs.
         </p>
       </div>
     </div>

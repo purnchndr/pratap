@@ -10,6 +10,12 @@
   align-items: center;
 }
 
+.line {
+  width: 2px;
+  height: 140px;
+  background-color: var(--clr);
+}
+
 .footersociallinks,
 .footerintro,
 .footercontact {
@@ -21,4 +27,29 @@
 }
 .footer h1 {
   margin: 10px 2px;
+}
+
+@media screen and (max-width: 900px) {
+  .footer {
+    flex-direction: column;
+  }
+  .footersociallinks,
+  .footerintro,
+  .footercontact {
+    width: 100%;
+  }
+  .footerintro {
+    width: 400px;
+  }
+
+  .line {
+    width: 70%;
+    height: 2px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .footerintro {
+    width: 100%;
+  }
 }

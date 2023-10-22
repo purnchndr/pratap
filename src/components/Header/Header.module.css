@@ -20,3 +20,21 @@
   font-size: 45px;
   line-height: 1;
 }
+
+@media screen and (max-width: 1000px) {
+  .header {
+    display: block;
+    text-align: center;
+    padding: 10px;
+  }
+  .middle h1 {
+    line-height: 0;
+  }
+
+  .header a {
+    font-size: 20px;
+  }
+  .right {
+    margin-top: 10px;
+  }
+}

@@ -7,6 +7,7 @@ import {
   GithubIcon,
   EmailIcon,
   PhoneIcon,
+  WhatsAppIcon,
 } from "../common/Icons";
 
 const iconsize = 24;
@@ -71,6 +72,14 @@ function Header() {
           to="tel:+919125847068"
         >
           <PhoneIcon size={iconsize} />
+        </Link>
+        <Link
+          title="Phone Link"
+          className={style.navlink}
+          target="_blank"
+          to="https://api.whatsapp.com/send/?phone=%2B919125847068&text=Hi+Pratap"
+        >
+          <WhatsAppIcon size={iconsize} />
         </Link>
       </div>
     </header>

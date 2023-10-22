@@ -48,7 +48,7 @@ const experience = [
     role: "Software Engineer",
     tech: "React, Node, JavaScript, SQL, Java",
     time: "Nov 2021 to Mar 2023",
-    image: "https://purnchndr.github.io/imagecdn/img/pratap/newgen.jpg",
+    image: "https://purnchndr.github.io/imagecdn/img/pratap/newgen.png",
     des: "This React Website provides essensial data about all countries of world.",
   },
   {

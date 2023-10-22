@@ -3,7 +3,11 @@
   justify-content: space-between;
   align-items: center;
   margin: 20px;
-  height: fit-content;
+  text-align: center;
+}
+
+.introdetails {
+  text-align: left;
 }
 
 .photo {
@@ -14,10 +18,10 @@
 }
 
 .photo img {
-  width: 40%;
+  width: 60%;
   border-radius: 50%;
-  border: 2px solid var(--clr);
-  box-shadow: 0 0 5px var(--clr);
+  /* border: 2px solid var(--clr); */
+  box-shadow: 7px 7px 10px var(--clr);
 }
 
 .photo h1 {
@@ -38,4 +42,13 @@
   box-shadow: 10px 10px 10px var(--clr);
 
   border: 3px solid var(--clr);
+}
+
+@media screen and (max-width: 650px) {
+  .intro {
+    flex-wrap: wrap;
+  }
+  .introsection {
+    width: 80%;
+  }
 }
