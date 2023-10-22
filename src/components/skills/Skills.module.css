@@ -1,0 +1,30 @@
+.skillsandstack {
+  margin: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.skillssection {
+  text-align: center;
+  width: 50%;
+  margin: 20px;
+  padding: 15px;
+  /* box-shadow: 0 0 10px var(--clr); */
+  box-shadow: 10px 10px 10px var(--clr);
+  border-radius: 1rem;
+  border: 3px solid var(--clr);
+}
+
+.teckstackspan {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.stack {
+  /* background-color: var(--clr-background2); */
+  margin: 3px;
+  padding: 10px 15px;
+  font-weight: 700;
+  border: 2px solid var(--clr-secondary);
+  border-radius: 1rem;
+}

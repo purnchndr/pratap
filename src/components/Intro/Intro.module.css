@@ -1,0 +1,41 @@
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+  height: fit-content;
+}
+
+.photo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.photo img {
+  width: 40%;
+  border-radius: 50%;
+  border: 2px solid var(--clr);
+  box-shadow: 0 0 5px var(--clr);
+}
+
+.photo h1 {
+  /* color: var(--clr-primary); */
+  margin: 3px;
+}
+
+.profileintro {
+}
+
+.introsection {
+  width: 50%;
+  min-height: 350px;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 1rem;
+  color: var(--clr-secondary);
+  box-shadow: 10px 10px 10px var(--clr);
+
+  border: 3px solid var(--clr);
+}
