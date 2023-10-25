@@ -2,30 +2,29 @@
   --clr-primary: #ff6d39;
   --clr-secondary: #007200;
   --clr: #545454;
-  --clr-background: #ffffff;
+  --clr-background: #fffff7;
   --clr-background1: #ffebeb;
   --clr-background2: #ecfeec;
+  --box-shadow: 0 13px 30px rgba(0, 0, 0, 0.11);
+
+  /* --clr-primary: #ff6d39;
+  --clr-secondary: #007200;
+  --clr: #9b9b9b;
+  --clr-background: #242424;
+  --clr-background1: #ffebeb;
+  --clr-background2: #ecfeec;
+  --box-shadow: 4px 4px 15px #0000008f; */
 }
 
 body {
   font-family: "Tilt Neon", sans-serif;
   margin: 0;
-  background-image: url("https://thumbs.dreamstime.com/z/high-quality-white-paper-texture-background-high-resolution-photo-high-quality-white-paper-texture-paper-background-148605108.jpg?w=2048");
   background-color: var(--clr-background);
   color: var(--clr);
-  transition: linear 2s;
+  transition: linear 1s;
 }
 
 @media screen and (max-width: 650px) {
-  body {
-    background-image: url("https://t4.ftcdn.net/jpg/01/18/68/39/360_F_118683953_kHB2QqUDiOiCasYItJzG9I9rHNfBNbzx.jpg");
-
-    /* background-position: left top;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMjI1IDE1MCIgd2lkdGg9IjEzNTAiIGhlaWdodD0iOTAwIj48cmVjdCB3aWR0aD0iMjI1IiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2Y5MyIvPjxyZWN0IHdpZHRoPSIyMjUiIGhlaWdodD0iNTAiIHk9IjUwIiBmaWxsPSIjZmZmIi8+PHJlY3Qgd2lkdGg9IjIyNSIgaGVpZ2h0PSI1MCIgeT0iMTAwIiBmaWxsPSIjMTI4ODA3Ii8+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTEyLjUsNzUpIj48Y2lyY2xlIHI9IjIwIiBmaWxsPSIjMDA4Ii8+PGNpcmNsZSByPSIxNy41IiBmaWxsPSIjZmZmIi8+PGNpcmNsZSByPSIzLjUiIGZpbGw9IiMwMDgiLz48ZyBpZD0iZCI+PGcgaWQ9ImMiPjxnIGlkPSJiIj48ZyBpZD0iYSI+PGNpcmNsZSByPSIwLjg3NSIgZmlsbD0iIzAwOCIgdHJhbnNmb3JtPSJyb3RhdGUoNy41KSB0cmFuc2xhdGUoMTcuNSkiLz48cGF0aCBmaWxsPSIjMDA4IiBkPSJNIDAsMTcuNSAwLjYsNyBDIDAuNiw3IDAsMiAwLDIgMCwyIC0wLjYsNyAtMC42LDcgTCAwLDE3LjUgeiIvPjwvZz48dXNlIHhsaW5rOmhyZWY9IiNhIiB0cmFuc2Zvcm09InJvdGF0ZSgxNSkiLz48L2c+PHVzZSB4bGluazpocmVmPSIjYiIgdHJhbnNmb3JtPSJyb3RhdGUoMzApIi8+PC9nPjx1c2UgeGxpbms6aHJlZj0iI2MiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPjwvZz48dXNlIHhsaW5rOmhyZWY9IiNkIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+PHVzZSB4bGluazpocmVmPSIjZCIgdHJhbnNmb3JtPSJyb3RhdGUoLTEyMCkiLz48L2c+PC9zdmc+"); */
-  }
 }
 
 .icon {
@@ -64,13 +63,13 @@ p {
 }
 
 h1 {
-  text-shadow: 2px 2px 0px black;
+  /* text-shadow: 2px 2px 0px black; */
   color: var(--clr-primary);
   margin: 3px 5px;
 }
 
 h2 {
-  text-shadow: 0.7px 0.7px 0px black;
+  /* text-shadow: 0.7px 0.7px 0px black; */
   color: var(--clr-secondary);
   margin: 5px;
 }

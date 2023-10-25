@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  box-shadow: 0 0 10px black;
+  box-shadow: var(--box-shadow);
 }
 
 .header a {

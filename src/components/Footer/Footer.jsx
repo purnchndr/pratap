@@ -89,7 +89,7 @@ function Footer() {
           target="_blank"
           title="Resume document"
           className={style.navlink}
-          to="https://docs.google.com/document/d/18PEardLKILyrmBauSSOVJrAi6Ve1SLxgg4aBELqgZBk/edit"
+          to="https://docs.google.com/document/d/e/2PACX-1vQdEjPmfvOqbjtcct7NvFm25vqPIOkDzYOcV_dalawKImB5V7CrVCfHXnlbmkhFGA3BneMGVH0yYKhc/pub"
         >
           <DocumentIcon size={iconsize} />
         </Link>

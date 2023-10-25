@@ -1,0 +1,13 @@
+.darkcntr {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  margin: 10px 1px;
+  fill: var(--clr-primary);
+  background-color: var(--clr-background);
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  transition: linear 1s;
+}

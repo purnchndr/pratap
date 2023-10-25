@@ -20,12 +20,10 @@
 .photo img {
   width: 60%;
   border-radius: 50%;
-  /* border: 2px solid var(--clr); */
-  box-shadow: 7px 7px 10px var(--clr);
+  box-shadow: var(--box-shadow);
 }
 
 .photo h1 {
-  /* color: var(--clr-primary); */
   margin: 3px;
 }
 
@@ -39,9 +37,7 @@
   margin: 20px;
   border-radius: 1rem;
   color: var(--clr-secondary);
-  box-shadow: 10px 10px 10px var(--clr);
-
-  border: 3px solid var(--clr);
+  box-shadow: var(--box-shadow);
 }
 
 @media screen and (max-width: 650px) {

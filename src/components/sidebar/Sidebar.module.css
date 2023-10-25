@@ -1,0 +1,33 @@
+.sidebar {
+  position: fixed;
+  top: 350px;
+  right: -170px;
+  display: flex;
+  padding: 5px 5px;
+  transform: rotate(-90deg);
+  background-color: var(--clr-background);
+  box-shadow: var(--box-shadow);
+  font-size: large;
+  border-radius: 3px;
+  transition: linear 1s;
+}
+
+.sidebaritem a {
+  margin: 5px;
+  color: var(--clr-secondary);
+  text-shadow: 1px 1px 1px var(--clr-background);
+}
+
+@media screen and (max-width: 650px) {
+  .sidebar {
+    top: auto;
+    right: auto;
+    padding: 10px 3px;
+    bottom: 0px;
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-evenly;
+    transform: rotate(0deg);
+  }
+}
