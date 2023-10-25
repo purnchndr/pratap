@@ -1,16 +1,15 @@
 import { useEffect, useState } from "react";
 import style from "./DarkMode.module.css";
 import { DarkIcon, LightIcon } from "../common/Icons";
-import Button from "../common/Button/Button";
+
 function DarkMode() {
   const [dark, setDark] = useState(false);
-
+  const root = document.querySelector(":root");
   function toggleDarkMode() {
-    setDark((curr) => setDark(!curr));
+    setDark(!dark);
   }
 
   useEffect(() => {
-    const root = document.querySelector(":root");
     if (!dark) {
       root.style.setProperty("--clr-background", "#fffff7");
       root.style.setProperty("--clr", "#545454");

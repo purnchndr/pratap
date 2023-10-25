@@ -10,4 +10,5 @@
   box-shadow: var(--box-shadow);
   cursor: pointer;
   transition: linear 1s;
+  z-index: 10;
 }

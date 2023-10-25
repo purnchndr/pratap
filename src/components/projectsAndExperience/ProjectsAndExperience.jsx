@@ -1,4 +1,5 @@
 import Button from "../common/Button/Button";
+import { OpenLinkIcon } from "../common/Icons";
 import style from "./ProjectsAndExperience.module.css";
 
 const img = "https://purnchndr.github.io/imagecdn/img/pratap/country.png";
@@ -140,8 +141,7 @@ function ProjectCard({ project }) {
             Technology: {project.tech} || ⌛{project.time}
             <Button>
               <a href={project.link} target="_balank" rel="noreffernce">
-                {" "}
-                View Live🔗{" "}
+                View Live <OpenLinkIcon />
               </a>
             </Button>
           </span>
