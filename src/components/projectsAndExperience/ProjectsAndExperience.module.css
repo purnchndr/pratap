@@ -4,9 +4,14 @@
   box-shadow: var(--box-shadow);
   text-align: center;
 }
+
+.projectheading {
+  margin-bottom: 10px;
+}
+
 .projectCards {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
@@ -15,7 +20,10 @@
   margin: 10px;
   box-shadow: var(--box-shadow);
   border-radius: 1rem;
-  width: 250px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .projectimgcon {
@@ -24,36 +32,111 @@
 
 .projectimg {
   width: 100%;
-  height: 150px;
+  height: 140px;
   border-radius: 1rem 1rem 0 0;
-  box-shadow: var(--box-shadow);
+  object-fit: cover;
+}
+
+.colorheader {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.colorlabel {
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0 12px;
+  text-align: center;
+}
+
+.allinfo {
+  padding: 8px 10px 10px 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.allinfo h2 {
+  margin: 4px 0;
+  font-size: 0.95rem;
+}
+
+.allinfo h3 {
+  margin: 2px 0;
+  font-size: 0.85rem;
+}
+
+.allinfo h4 {
+  margin: 2px 0;
+  font-size: 0.8rem;
+}
+
+.description {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--clr);
+  margin: 6px 0;
+  font-weight: normal;
+}
+
+.metricsrow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 6px 0;
+}
+
+.metric {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 1rem;
+  background-color: var(--clr-background2);
+  color: var(--clr-secondary);
+  border: 1px solid var(--clr-secondary);
+}
+
+.techline {
+  font-size: 0.72rem;
+  color: var(--clr);
+  font-weight: 600;
 }
 
 .info {
   color: var(--clr-secondary);
-}
-
-.allinfo {
-  padding: 0 5px 5px 5px;
+  margin-top: auto;
+  padding-top: 6px;
 }
 
 .infoexperience {
   color: var(--clr);
+  margin-top: auto;
+  padding-top: 6px;
+}
+
+.proprietarytag {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.7rem;
+  color: var(--clr-primary);
+  font-style: italic;
+  font-weight: 600;
 }
 
 @media screen and (max-width: 450px) {
   .project {
-    margin: 5px;
-    box-shadow: var(--box-shadow);
-    border-radius: 1rem;
-    width: 150px;
+    width: 155px;
     font-size: small;
   }
-
+  .colorheader {
+    height: 60px;
+  }
   .projectimg {
-    width: 100%;
     height: 90px;
-    border-radius: 1rem 1rem 0 0;
-    box-shadow: var(--box-shadow);
   }
 }

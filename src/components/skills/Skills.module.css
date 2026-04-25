@@ -1,13 +1,25 @@
+.skillsroot {
+  padding: 10px 20px;
+}
+
+.sectiontitle {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
 .skillsandstack {
-  margin: 10px;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .skillssection {
   text-align: center;
-  width: 50%;
-  margin: 20px;
+  width: 28%;
+  min-width: 220px;
+  margin: 10px;
   padding: 15px;
   box-shadow: var(--box-shadow);
   border-radius: 1rem;
@@ -16,23 +28,21 @@
 .teckstackspan {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 8px;
 }
 
 .stack {
-  margin: 3px;
-  padding: 10px 15px;
+  padding: 6px 14px;
   font-weight: 700;
+  font-size: 0.82rem;
   border: 2px solid var(--clr-secondary);
   border-radius: 1rem;
 }
 
 @media screen and (max-width: 650px) {
-  .skillsandstack {
-    flex-wrap: wrap;
-  }
-
   .skillssection {
-    text-align: center;
     width: 80%;
   }
 }

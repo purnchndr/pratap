@@ -3,12 +3,9 @@ import style from "./Footer.module.css";
 import { Link, NavLink } from "react-router-dom";
 import {
   LinkedInIcon,
-  DocumentIcon,
   InstagramIcon,
   GithubIcon,
   EmailIcon,
-  PhoneIcon,
-  WhatsAppIcon,
 } from "../common/Icons";
 
 const iconsize = 24;
@@ -21,8 +18,8 @@ function Footer() {
           <h1>Purnachandra</h1>
         </NavLink>
         <p>
-          I love solving real world problem using technology, I always curius to
-          learning and inplementing new things
+          AI Voice Systems Engineer. I build systems that operate at scale —
+          10,000+ calls/day, real pipelines, real impact.
         </p>
       </div>
       <div className={style.line}></div>
@@ -70,34 +67,8 @@ function Footer() {
         >
           <EmailIcon size={iconsize} />
         </Link>
-        <Link
-          title="Phone Link"
-          className={style.navlink}
-          to="tel:+919125847068"
-        >
-          <PhoneIcon size={iconsize} />
-        </Link>
-        <Link
-          title="Whatsapp Link"
-          className={style.navlink}
-          target="_blank"
-          to="https://api.whatsapp.com/send/?phone=%2B919125847068&text=Hi+Pratap"
-        >
-          <WhatsAppIcon size={iconsize} />
-        </Link>
-        <Link
-          target="_blank"
-          title="Resume document"
-          className={style.navlink}
-          to="https://docs.google.com/document/d/e/2PACX-1vQdEjPmfvOqbjtcct7NvFm25vqPIOkDzYOcV_dalawKImB5V7CrVCfHXnlbmkhFGA3BneMGVH0yYKhc/pub"
-        >
-          <DocumentIcon size={iconsize} />
-        </Link>
         <p>
           <a href="mailto:pratap.careers@gmail.com">pratap.careers@gmail.com</a>
-        </p>
-        <p>
-          <a href="tel:+919125847068">+919125847068</a>
         </p>
       </div>
     </footer>

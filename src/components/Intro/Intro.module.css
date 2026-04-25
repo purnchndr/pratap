@@ -6,10 +6,6 @@
   text-align: center;
 }
 
-.introdetails {
-  text-align: left;
-}
-
 .photo {
   display: flex;
   align-items: center;
@@ -18,16 +14,71 @@
 }
 
 .photo img {
-  width: 60%;
+  width: 55%;
   border-radius: 50%;
   box-shadow: var(--box-shadow);
 }
 
 .photo h1 {
-  margin: 3px;
+  margin: 8px 3px 2px 3px;
+  font-size: 2rem;
+}
+
+.photo h2 {
+  margin: 2px 5px;
+  font-size: 0.85rem;
+}
+
+.badges {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.badge {
+  padding: 4px 12px;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background-color: var(--clr-background1);
+  color: var(--clr-primary);
+  border: 1.5px solid var(--clr-primary);
 }
 
 .profileintro {
+  text-align: left;
+}
+
+.tagline {
+  font-size: 1rem;
+  color: var(--clr-secondary);
+  margin: 4px 0 12px 0;
+  font-style: italic;
+}
+
+.introdetails {
+  text-align: left;
+  line-height: 1.7;
+  margin: 8px 0;
+  font-size: 0.95rem;
+}
+
+.stackrow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+.stackbadge {
+  padding: 5px 12px;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: 1.5px solid var(--clr-secondary);
+  color: var(--clr-secondary);
 }
 
 .introsection {
@@ -36,7 +87,6 @@
   padding: 20px;
   margin: 20px;
   border-radius: 1rem;
-  color: var(--clr-secondary);
   box-shadow: var(--box-shadow);
 }
 
@@ -46,5 +96,14 @@
   }
   .introsection {
     width: 80%;
+  }
+  .profileintro {
+    text-align: center;
+  }
+  .introdetails {
+    text-align: center;
+  }
+  .stackrow {
+    justify-content: center;
   }
 }

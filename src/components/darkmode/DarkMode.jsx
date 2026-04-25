@@ -1,31 +1,26 @@
 import { useEffect, useState } from "react";
-import style from "./DarkMode.module.css";
 import { DarkIcon, LightIcon } from "../common/Icons";
 
-function DarkMode() {
-  const [dark, setDark] = useState(false);
-  const root = document.querySelector(":root");
-  function toggleDarkMode() {
-    setDark(!dark);
-  }
+function DarkMode({ className }) {
+  // Default dark — only light if user explicitly chose light
+  const [dark, setDark] = useState(
+    () => localStorage.getItem("theme") !== "light"
+  );
 
   useEffect(() => {
-    if (!dark) {
-      root.style.setProperty("--clr-background", "#fffff7");
-      root.style.setProperty("--clr", "#545454");
-      root.style.setProperty("--box-shadow", "0 13px 30px #0000001c");
-    } else {
-      root.style.setProperty("--clr-background", "#242424");
-      root.style.setProperty("--clr", "#9b9b9b");
-      root.style.setProperty("--box-shadow", "4px 4px 15px #0000008f");
-    }
+    document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+    localStorage.setItem("theme", dark ? "dark" : "light");
   }, [dark]);
+
   return (
-    <div className={style.darkcntr}>
-      <div onClick={toggleDarkMode}>
-        {dark ? <DarkIcon size={24} /> : <LightIcon size={24} />}
-      </div>
-    </div>
+    <button
+      className={className}
+      onClick={() => setDark(!dark)}
+      title="Toggle theme"
+      aria-label="Toggle dark mode"
+    >
+      {dark ? <LightIcon size={18} /> : <DarkIcon size={18} />}
+    </button>
   );
 }
 

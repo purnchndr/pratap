@@ -1,40 +1,232 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: var(--nav-height);
+  transition: background 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.scrolled {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 1px 0 var(--border);
+}
+
+[data-theme="dark"] .scrolled {
+  background: rgba(15, 23, 42, 0.85);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  box-shadow: var(--box-shadow);
+  justify-content: space-between;
+  padding: 0 40px;
+  gap: 24px;
 }
 
-.header a {
-  text-decoration: none;
-  padding: 0 10px;
-  font-size: 25px;
+/* Logo */
+.logo {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--accent) !important;
+  letter-spacing: -0.03em;
+  flex-shrink: 0;
 }
 
-.left a {
-  color: var(--clr-secondary);
+.logo::after {
+  display: none;
 }
 
-.header h1 {
-  margin: 0;
-  font-size: 45px;
-  line-height: 1;
+/* Nav */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex: 1;
+  justify-content: center;
 }
 
-@media screen and (max-width: 1000px) {
-  .header {
+.navLink {
+  padding: 7px 14px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-2);
+  border-radius: 6px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.navLink::after {
+  display: none;
+}
+
+.navLink:hover {
+  color: var(--text);
+  background: var(--bg-section);
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.iconBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  color: var(--text-2);
+  transition: color 0.2s, background 0.2s;
+}
+
+.iconBtn::after {
+  display: none;
+}
+
+.iconBtn:hover {
+  color: var(--text);
+  background: var(--bg-section);
+}
+
+/* Dark mode button (passed as className to DarkMode) */
+.darkBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: none;
+  border: 1.5px solid var(--border);
+  color: var(--text-2);
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s, border-color 0.2s;
+  fill: var(--text-2);
+}
+
+.darkBtn:hover {
+  color: var(--text);
+  fill: var(--text);
+  background: var(--bg-section);
+  border-color: var(--text-3);
+}
+
+.darkBtn .icon {
+  fill: inherit;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.l1,
+.l2,
+.l3,
+.l1open,
+.l2open,
+.l3open {
+  display: block;
+  height: 2px;
+  width: 100%;
+  border-radius: 2px;
+  background: var(--text);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.l1open {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.l2open {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.l3open {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Scroll progress bar */
+.progressBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), #f97316, var(--green));
+  transition: width 0.1s linear;
+  border-radius: 0 2px 2px 0;
+}
+
+/* Mobile overlay */
+.mobileOverlay {
+  display: none;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .inner {
+    padding: 0 20px;
+  }
+
+  .nav {
+    display: none;
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 12px 16px 20px;
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow-md);
+    gap: 2px;
+    z-index: 99;
+  }
+
+  .navOpen {
+    display: flex;
+  }
+
+  .navLink {
+    padding: 12px 14px;
+    font-size: 0.95rem;
+    margin: 0;
+    border-radius: 8px;
+    text-align: left;
+    border: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobileOverlay {
     display: block;
-    text-align: center;
-    padding: 10px;
-  }
-  .middle h1 {
-    line-height: 0;
-  }
-
-  .header a {
-    font-size: 20px;
-  }
-  .right {
-    margin-top: 10px;
+    position: fixed;
+    inset: 0;
+    top: var(--nav-height);
+    z-index: 98;
   }
 }
